@@ -1,7 +1,7 @@
 import { default as axiosBase } from "axios";
 
 const axiosProd = axiosBase.create({
-  baseURL: "https://api.modulo.blog"
+  baseURL: "https://api.example.com"
   // withCredentials: true
   /* other custom settings */
 });

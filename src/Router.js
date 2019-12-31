@@ -8,7 +8,7 @@ import Loading from "components/Loading.js";
 
 const Landing = React.lazy(() => import("pages/Landing"));
 const my404 = React.lazy(() => import("pages/my404"));
-const Test = React.lazy(() => import("pages/Test"));
+const Login = React.lazy(() => import("pages/Login"));
 
 toast.configure();
 
@@ -17,7 +17,7 @@ export default function Router() {
     <Suspense fallback={<Loading />}>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/test" component={Test} />
+          <Route exact path="/login" component={Login} />
           <Route exact path="/" component={Landing} />
           <Route component={my404} />
         </Switch>

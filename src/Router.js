@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import Loading from "components/Loading.js";
+import ErrorBoundary from "components/ErrorBoundary";
 
 const Landing = React.lazy(() => import("pages/Landing"));
 const my404 = React.lazy(() => import("pages/my404"));
@@ -14,6 +15,7 @@ toast.configure();
 
 export default function Router() {
   return (
+    // <ErrorBoundary>
     <Suspense fallback={<Loading />}>
       <BrowserRouter>
         <Switch>
@@ -23,5 +25,6 @@ export default function Router() {
         </Switch>
       </BrowserRouter>
     </Suspense>
+    // </ErrorBoundary>
   );
 }

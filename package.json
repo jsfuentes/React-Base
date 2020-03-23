@@ -19,7 +19,7 @@
     "build:css": "postcss src/styles/index.css -o src/styles/tailwind.css",
     "watch:css": "postcss src/styles/index.css -o src/styles/tailwind.css -w",
     "start": "yarn watch:css & react-scripts start",
-    "dev": "react-scripts start",
+    "dev": "yarn start",
     "build": "yarn build:css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

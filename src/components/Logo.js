@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Logo = props => {
+function Logo(props) {
   return (
     <a className="flex items-center" href="/">
       <img
@@ -16,14 +16,14 @@ const Logo = props => {
       )}
     </a>
   );
-};
+}
 
 Logo.propTypes = {
-  showName: PropTypes.bool
+  showName: PropTypes.bool,
 };
 
 Logo.defaultProps = {
-  showName: true
+  showName: true,
 };
 
 export default Logo;

@@ -8,10 +8,12 @@ import Footer from "components/Footer";
 export default function Login() {
   const { handleSubmit, register, errors } = useForm();
 
-  const onSubmit = user => {
+  function onSubmit(user) {
     console.log(user);
-    axios.post("/user", user).then(resp => console.log("resp recieved", resp));
-  };
+    axios
+      .post("/user", user)
+      .then((resp) => console.log("resp recieved", resp));
+  }
 
   return (
     <>

@@ -20,7 +20,7 @@ function Link(props) {
 
 Link.propTypes = {
   href: PropTypes.string.isRequired,
-  children: PropTypes.any
+  children: PropTypes.any,
 };
 
 export default Link;

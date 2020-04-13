@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { toast } from "components/Toast";
+import { toast } from "react-toastify";
 import _ from "lodash";
 import { axios } from "utils.js";
 import { withRouter } from "react-router-dom";
@@ -10,16 +10,16 @@ const uuidv4 = require("uuid/v4");
 
 class CTA extends Component {
   state = {
-    email: null
+    email: null,
   };
 
-  handleEmailChange = event => {
+  handleEmailChange = (event) => {
     this.setState({
-      email: event.target.value
+      email: event.target.value,
     });
   };
 
-  handleSubmit = event => {
+  handleSubmit = (event) => {
     event.preventDefault();
     this.startTrackingLead();
 
@@ -32,7 +32,7 @@ class CTA extends Component {
       toast("Thanks! We've added you to the waitlist.");
     }
     this.setState({
-      email: null
+      email: null,
     });
   };
 
@@ -44,7 +44,7 @@ class CTA extends Component {
     analytics.identify(id, {
       email: this.state.email,
       status: source,
-      page: `https://www.modulo.blog${this.props.location.pathname}`
+      page: `https://www.modulo.blog${this.props.location.pathname}`,
     });
 
     // @ts-ignore
@@ -131,9 +131,9 @@ export default withRouter(CTA);
 
 CTA.propTypes = {
   source: PropTypes.string.isRequired,
-  variant: PropTypes.oneOf(["mobile", "small", "large"])
+  variant: PropTypes.oneOf(["mobile", "small", "large"]),
 };
 
 CTA.defaultProps = {
-  variant: "large"
+  variant: "large",
 };

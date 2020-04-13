@@ -10,11 +10,11 @@ export default function Landing() {
   useEffect(() => {
     axios
       .get("/test")
-      .then(response => {
+      .then((response) => {
         console.log("Haha", response);
         setResp(response.data);
       })
-      .catch(error => {
+      .catch((error) => {
         console.error(error);
       });
   }, []);

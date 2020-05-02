@@ -7,6 +7,7 @@ create-react-app with tailwindcss and more:
 - proxy routing to localhost:3001 (package.json)
 - absolute path importing (jsconfig.json)
 - config files with a `.get` and `.has` wrapper similar to the config npm package (conf)
+- React toastify setup enabling `toast(` call anywhere
 
 ## Running
 

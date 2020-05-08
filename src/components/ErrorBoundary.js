@@ -25,7 +25,7 @@ class ErrorBoundary extends React.Component {
       console.log("There was an error");
       // You can render any custom fallback UI
       return (
-        <div className="w-screen h-screen bg-black shadow-md overflow-hidden rounded-l-lg flex flex-col items-center justify-center">
+        <div className="w-screen h-screen bg-black shadow-md overflow-hidden flex flex-col items-center justify-center">
           <div className="text-white p-8 text-center">
             An error occured, try to restart Slingshow.
           </div>

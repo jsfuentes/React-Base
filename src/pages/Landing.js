@@ -20,30 +20,29 @@ export default function Landing() {
   }, []);
 
   return (
-    <>
+    <div className="flex flex-col w-screen h-screen justify-center items-center">
       <Navbar>
         <Link to="/login" className="navlink">
           Login
         </Link>
       </Navbar>
 
-      <div className="w-full p-8">
-        <div className="px-4 pb-4 flex flex-col justify-center items-center">
-          <div className="text-4xl block font-bold mb-4">
-            Welcome to React Base
-          </div>
-          <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mb-4"
-            type="button"
-          >
-            Useless Button
-          </button>
-          <div className="text-2xl block font-bold mb-4">
-            {resp ? `The Server Says "${resp}"` : "The Server Can't Be Reached"}
-          </div>
+      <div className="w-full p-12 flex-1 flex flex-col justify-center items-center">
+        <div className="text-4xl block font-bold mb-4 text-center">
+          Welcome to React Base
+        </div>
+        <button
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mb-4"
+          type="button"
+        >
+          Useless Button
+        </button>
+        <div className="text-2xl block font-bold mb-4">
+          {resp ? `The Server Says "${resp}"` : "The Server Can't Be Reached"}
         </div>
       </div>
+
       <Footer />
-    </>
+    </div>
   );
 }

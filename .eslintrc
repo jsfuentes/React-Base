@@ -1,0 +1,38 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es2021": true,
+    "node": true,
+    "cypress/globals": true
+  },
+  "plugins": ["react", "react-hooks", "@typescript-eslint", "cypress"],
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2020
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "linebreak-style": ["error", "unix"],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/react-in-jsx-scope": "off", // Webpack config adds react everywhere
+    "react/no-unescaped-entities": "off", //I think &pos; vs ' can cause more accidently errors than allowing potentially jsx code into the text(WYSIWYG)
+    "no-unused-vars": "off", //I like having Sentry and debug always available
+    "@typescript-eslint/no-unused-vars": "off", //I like having Sentry and debug always available
+    "@typescript-eslint/no-var-requires": "off", // I like requiring debug
+    "@typescript-eslint/no-empty-interface": "off" // I like having empty props so you can easily add new props when needed
+  }
+}

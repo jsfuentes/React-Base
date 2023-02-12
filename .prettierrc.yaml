@@ -1,0 +1,2 @@
+trailingComma: "es5" #Trailing commas where valid in ES5 (objects, arrays, etc.)
+tabWidth: 2

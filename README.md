@@ -1,26 +1,35 @@
-# React-Base
+# React Base
 
-create-react-app with tailwindcss and more:
+This base project is a custom React Redux Tailwind Typescript frontend.
 
-- basic React Router routing with code splitting and loading with React Suspense
-- some basic components like a Navbar, LazyImage, and Footer
-- proxy routing to localhost:3001 (package.json)
-- absolute path importing (jsconfig.json)
-- config files with a `.get` and `.has` wrapper similar to the config npm package (conf)
-- React toastify setup enabling `toast(` call anywhere
+- React v18, [Tailwind v3](https://tailwindcss.com/), [Redux Toolkit](https://redux-toolkit.js.org/), Webpack v5, and Typescript v4
+- Form Library [react-hook-form](https://react-hook-form.com/)
+- Default frontend file structure with folder for types, contexts, and api calls
+- Default components and pages including a Button, Homepage, Login, and 404 Page
+- Icon library [Boxicons](https://boxicons.com)
+- `react-router` v6 setup with Code Splitting and Lazy Loading
+- `debug` setup offering a better color coded version of console.log
+- `react-toastify` setup
+- conf folder with a similar interface to the npm package `config`
+- blazing fast `esbuild-loader` webpack config beating babel-loader by 80%
+- Redux Error Manager with redux actions to standardize error logging
+
+And code for the following services, just add secrets to `.prod.env` for the backend and `assets/conf/default.js` and `assets/conf/producation.js` for the frontend:
+
+- Logrocket or Posthog (assets/src/app.tsx)
+- Sentry (assets/src/app.tsx)
+- Google Login (assets/conf/default.js)
+
+## Initial Setup
+
+```
+npm i
+```
 
 ## Running
 
-- `yarn`
-- `yarn build` for some reason need to precompile tailwind
-- `yarn start` for dev
+wip
 
-## Editing
+## Deployment
 
-- Change the url in conf/prod to change the api hit in production.
-- Add a Sentry DNS to default.js to enable Sentry
-- Disable debugging in prod in index.js
-
-## Building
-
-- `yarn build` to build static assets for prod
+I recommend [Render](https://render.com) because of their generous free plan. You get a free 750 hours of shared server time a month and free 90 days of a Postgres DB.

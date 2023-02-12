@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "baseUrl": "." /* Base directory to resolve non-absolute module names. */,
+    "module": "es2022",
+    "target": "es5" /* This has to be es5 and not commonjs according to webpack typescript docs. */,
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "strictNullChecks": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true /* See https://webpack.js.org/guides/typescript/ for this and next option */,
+    "esModuleInterop": true,
+    "isolatedModules": true
+  }
+}
